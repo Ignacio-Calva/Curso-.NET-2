@@ -3,8 +3,20 @@
   "WorkspaceRootPath": "D:\\Facultad\\Maxi Programa C# 2\\Ejercitacion\\Curso-.NET-2\\App-Certificado\\ProyectoFinal\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DDD1636A-FFA7-41DD-A239-D7A181972C2E}|AplicacionEscritorio\\AplicacionEscritorio.csproj|d:\\facultad\\maxi programa c# 2\\ejercitacion\\curso-.net-2\\app-certificado\\proyectofinal\\aplicacionescritorio\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{DDD1636A-FFA7-41DD-A239-D7A181972C2E}|AplicacionEscritorio\\AplicacionEscritorio.csproj|solutionrelative:aplicacionescritorio\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{DDD1636A-FFA7-41DD-A239-D7A181972C2E}|AplicacionEscritorio\\AplicacionEscritorio.csproj|d:\\facultad\\maxi programa c# 2\\ejercitacion\\curso-.net-2\\app-certificado\\proyectofinal\\aplicacionescritorio\\formprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DDD1636A-FFA7-41DD-A239-D7A181972C2E}|AplicacionEscritorio\\AplicacionEscritorio.csproj|solutionrelative:aplicacionescritorio\\formprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DDD1636A-FFA7-41DD-A239-D7A181972C2E}|AplicacionEscritorio\\AplicacionEscritorio.csproj|d:\\facultad\\maxi programa c# 2\\ejercitacion\\curso-.net-2\\app-certificado\\proyectofinal\\aplicacionescritorio\\formprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DDD1636A-FFA7-41DD-A239-D7A181972C2E}|AplicacionEscritorio\\AplicacionEscritorio.csproj|solutionrelative:aplicacionescritorio\\formprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA209C47-1FD8-4C20-A964-8C7F42AD9B1C}|Dominio\\Dominio.csproj|d:\\facultad\\maxi programa c# 2\\ejercitacion\\curso-.net-2\\app-certificado\\proyectofinal\\dominio\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA209C47-1FD8-4C20-A964-8C7F42AD9B1C}|Dominio\\Dominio.csproj|solutionrelative:dominio\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29561171-3F6E-464C-BE67-720E9C6D841F}|Negocio\\Negocio.csproj|d:\\facultad\\maxi programa c# 2\\ejercitacion\\curso-.net-2\\app-certificado\\proyectofinal\\negocio\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29561171-3F6E-464C-BE67-720E9C6D841F}|Negocio\\Negocio.csproj|solutionrelative:negocio\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -22,12 +34,51 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "formPrincipal.cs",
+              "DocumentMoniker": "D:\\Facultad\\Maxi Programa C# 2\\Ejercitacion\\Curso-.NET-2\\App-Certificado\\ProyectoFinal\\AplicacionEscritorio\\formPrincipal.cs",
+              "RelativeDocumentMoniker": "AplicacionEscritorio\\formPrincipal.cs",
+              "ToolTip": "D:\\Facultad\\Maxi Programa C# 2\\Ejercitacion\\Curso-.NET-2\\App-Certificado\\ProyectoFinal\\AplicacionEscritorio\\formPrincipal.cs*",
+              "RelativeToolTip": "AplicacionEscritorio\\formPrincipal.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T21:37:27.041Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "D:\\Facultad\\Maxi Programa C# 2\\Ejercitacion\\Curso-.NET-2\\App-Certificado\\ProyectoFinal\\Dominio\\Class1.cs",
+              "RelativeDocumentMoniker": "Dominio\\Class1.cs",
+              "ToolTip": "D:\\Facultad\\Maxi Programa C# 2\\Ejercitacion\\Curso-.NET-2\\App-Certificado\\ProyectoFinal\\Dominio\\Class1.cs",
+              "RelativeToolTip": "Dominio\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T21:37:16.105Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "D:\\Facultad\\Maxi Programa C# 2\\Ejercitacion\\Curso-.NET-2\\App-Certificado\\ProyectoFinal\\Negocio\\Class1.cs",
+              "RelativeDocumentMoniker": "Negocio\\Class1.cs",
+              "ToolTip": "D:\\Facultad\\Maxi Programa C# 2\\Ejercitacion\\Curso-.NET-2\\App-Certificado\\ProyectoFinal\\Negocio\\Class1.cs",
+              "RelativeToolTip": "Negocio\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T21:36:22.103Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Form1.cs [Dise\u00F1o]",
-              "DocumentMoniker": "D:\\Facultad\\Maxi Programa C# 2\\Ejercitacion\\Curso-.NET-2\\App-Certificado\\ProyectoFinal\\AplicacionEscritorio\\Form1.cs",
-              "RelativeDocumentMoniker": "AplicacionEscritorio\\Form1.cs",
-              "ToolTip": "D:\\Facultad\\Maxi Programa C# 2\\Ejercitacion\\Curso-.NET-2\\App-Certificado\\ProyectoFinal\\AplicacionEscritorio\\Form1.cs [Dise\u00F1o]*",
-              "RelativeToolTip": "AplicacionEscritorio\\Form1.cs [Dise\u00F1o]*",
+              "Title": "formPrincipal.cs [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\Facultad\\Maxi Programa C# 2\\Ejercitacion\\Curso-.NET-2\\App-Certificado\\ProyectoFinal\\AplicacionEscritorio\\formPrincipal.cs",
+              "RelativeDocumentMoniker": "AplicacionEscritorio\\formPrincipal.cs",
+              "ToolTip": "D:\\Facultad\\Maxi Programa C# 2\\Ejercitacion\\Curso-.NET-2\\App-Certificado\\ProyectoFinal\\AplicacionEscritorio\\formPrincipal.cs [Dise\u00F1o]*",
+              "RelativeToolTip": "AplicacionEscritorio\\formPrincipal.cs [Dise\u00F1o]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-15T21:28:12.646Z",
               "EditorCaption": " [Dise\u00F1o]"

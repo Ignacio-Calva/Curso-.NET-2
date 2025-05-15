@@ -1,0 +1,6 @@
+D:\Facultad\Maxi Programa C# 2\Ejercitacion\Curso-.NET-2\App-Certificado\ProyectoFinal\Dominio\bin\Debug\Dominio.dll
+D:\Facultad\Maxi Programa C# 2\Ejercitacion\Curso-.NET-2\App-Certificado\ProyectoFinal\Dominio\bin\Debug\Dominio.pdb
+D:\Facultad\Maxi Programa C# 2\Ejercitacion\Curso-.NET-2\App-Certificado\ProyectoFinal\Dominio\obj\Debug\Dominio.csproj.AssemblyReference.cache
+D:\Facultad\Maxi Programa C# 2\Ejercitacion\Curso-.NET-2\App-Certificado\ProyectoFinal\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
+D:\Facultad\Maxi Programa C# 2\Ejercitacion\Curso-.NET-2\App-Certificado\ProyectoFinal\Dominio\obj\Debug\Dominio.dll
+D:\Facultad\Maxi Programa C# 2\Ejercitacion\Curso-.NET-2\App-Certificado\ProyectoFinal\Dominio\obj\Debug\Dominio.pdb
