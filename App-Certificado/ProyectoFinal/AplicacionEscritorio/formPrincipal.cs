@@ -15,8 +15,17 @@ namespace AplicacionEscritorio
     public partial class formPrincipal : Form
     {
         public formPrincipal()
-        {
+        { 
             InitializeComponent();
+            cargarDgv();
+        }
+        public void cargarDgv()
+        {
+            List<Articulos> listaArt = new List<Articulos>();
+            ArticuloNegocio negocioArt = new Negocio.ArticuloNegocio();
+            listaArt = negocioArt.listarArticulos();
+            dgvProductos.DataSource = listaArt;
+            dgvProductos.Columns["UrlImagen"].Visible = false;
         }
     }
 }
