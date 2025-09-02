@@ -42,5 +42,29 @@ namespace AplicacionEscritorio.Properties
         {
             Close();
         }
+
+        private void AgregarArticulo_Load(object sender, EventArgs e)
+        {
+            //Creo los negocio de Categoria y Marca
+            CategoriaNegocio negocioCate = new CategoriaNegocio();
+            MarcaNegocio negocioMarca = new MarcaNegocio();
+            try
+            {
+                //Cargo los ComboBox
+                comboCategoria.DataSource = negocioCate.listarCategorias();
+                comboCategoria.ValueMember = "IdCategoria"; //Tengo que usar LA PROPIEDAD DE LA CLASE
+                comboCategoria.DisplayMember = "Descripcion";
+
+
+                /////MARCA (PENDIENTE)
+                comboMarca.DataSource = negocioMarca.listarMarcas();
+                comboMarca.ValueMember = "IdMarca";
+                comboMarca.DisplayMember = "Descripcion";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
     }
 }

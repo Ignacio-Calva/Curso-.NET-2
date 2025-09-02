@@ -34,5 +34,10 @@ namespace AplicacionEscritorio
             AgregarArticulo ventana = new AgregarArticulo();
             ventana.ShowDialog();
         }
+
+        private void formPrincipal_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

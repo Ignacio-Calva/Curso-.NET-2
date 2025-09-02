@@ -37,6 +37,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.lblCategoria = new System.Windows.Forms.Label();
+            this.comboCategoria = new System.Windows.Forms.ComboBox();
+            this.comboMarca = new System.Windows.Forms.ComboBox();
+            this.lblMarca = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblCodigo
@@ -86,7 +90,7 @@
             // 
             // tbxDescripcion
             // 
-            this.tbxDescripcion.Location = new System.Drawing.Point(96, 110);
+            this.tbxDescripcion.Location = new System.Drawing.Point(96, 115);
             this.tbxDescripcion.Name = "tbxDescripcion";
             this.tbxDescripcion.Size = new System.Drawing.Size(260, 20);
             this.tbxDescripcion.TabIndex = 6;
@@ -95,7 +99,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 113);
+            this.label2.Location = new System.Drawing.Point(12, 118);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(78, 13);
             this.label2.TabIndex = 5;
@@ -103,7 +107,7 @@
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(45, 344);
+            this.btnAgregar.Location = new System.Drawing.Point(281, 154);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(75, 23);
             this.btnAgregar.TabIndex = 7;
@@ -113,7 +117,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(257, 344);
+            this.btnCancelar.Location = new System.Drawing.Point(281, 203);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 8;
@@ -121,11 +125,53 @@
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // lblCategoria
+            // 
+            this.lblCategoria.AutoSize = true;
+            this.lblCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCategoria.Location = new System.Drawing.Point(12, 159);
+            this.lblCategoria.Name = "lblCategoria";
+            this.lblCategoria.Size = new System.Drawing.Size(65, 13);
+            this.lblCategoria.TabIndex = 9;
+            this.lblCategoria.Text = "Categoria:";
+            // 
+            // comboCategoria
+            // 
+            this.comboCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboCategoria.FormattingEnabled = true;
+            this.comboCategoria.Location = new System.Drawing.Point(83, 156);
+            this.comboCategoria.Name = "comboCategoria";
+            this.comboCategoria.Size = new System.Drawing.Size(192, 21);
+            this.comboCategoria.TabIndex = 10;
+            // 
+            // comboMarca
+            // 
+            this.comboMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboMarca.FormattingEnabled = true;
+            this.comboMarca.Location = new System.Drawing.Point(64, 203);
+            this.comboMarca.Name = "comboMarca";
+            this.comboMarca.Size = new System.Drawing.Size(211, 21);
+            this.comboMarca.TabIndex = 12;
+            // 
+            // lblMarca
+            // 
+            this.lblMarca.AutoSize = true;
+            this.lblMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMarca.Location = new System.Drawing.Point(12, 206);
+            this.lblMarca.Name = "lblMarca";
+            this.lblMarca.Size = new System.Drawing.Size(46, 13);
+            this.lblMarca.TabIndex = 11;
+            this.lblMarca.Text = "Marca:";
+            // 
             // AgregarArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(385, 399);
+            this.ClientSize = new System.Drawing.Size(370, 254);
+            this.Controls.Add(this.comboMarca);
+            this.Controls.Add(this.lblMarca);
+            this.Controls.Add(this.comboCategoria);
+            this.Controls.Add(this.lblCategoria);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.tbxDescripcion);
@@ -138,6 +184,7 @@
             this.Name = "AgregarArticulo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AgregarArticulo";
+            this.Load += new System.EventHandler(this.AgregarArticulo_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -154,5 +201,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Label lblCategoria;
+        private System.Windows.Forms.ComboBox comboCategoria;
+        private System.Windows.Forms.ComboBox comboMarca;
+        private System.Windows.Forms.Label lblMarca;
     }
 }

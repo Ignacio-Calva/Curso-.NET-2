@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Dominio
 {
-    internal class Categorias
+    public class Categorias
     {
         //PROPIEDADES
         public int IdCategoria { get; set; }
