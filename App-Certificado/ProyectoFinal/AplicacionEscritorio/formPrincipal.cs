@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AplicacionEscritorio.Properties;
 using Dominio;
 using Negocio;
 
@@ -26,6 +27,12 @@ namespace AplicacionEscritorio
             listaArt = negocioArt.listarArticulos();
             dgvProductos.DataSource = listaArt;
             dgvProductos.Columns["UrlImagen"].Visible = false;
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            AgregarArticulo ventana = new AgregarArticulo();
+            ventana.ShowDialog();
         }
     }
 }

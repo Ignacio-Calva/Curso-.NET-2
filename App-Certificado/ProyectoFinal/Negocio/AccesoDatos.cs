@@ -33,6 +33,7 @@ namespace Negocio //Toda la informacion que necesito manipular desde la BDD
             comando.CommandText = query;
         }
 
+        //ejecutarRead se utiliza para leer informacion
         public void ejecutarRead()
         {
             //Establezco la conexion para el comando
@@ -46,6 +47,21 @@ namespace Negocio //Toda la informacion que necesito manipular desde la BDD
             catch (Exception ex)
             {
 
+                throw ex;
+            }
+        }
+
+        //ejecutarAccion se utiliza para 
+        public void ejecutarAccion()
+        {
+            comando.Connection = conexion; 
+            try
+            {
+                conexion.Open();
+                comando.ExecuteNonQuery(); //Ejecuta la sentencia sin necesariamente cargarla en un lector
+            }
+            catch (Exception ex)
+            {
                 throw ex;
             }
         }

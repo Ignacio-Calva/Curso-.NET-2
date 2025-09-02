@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.SqlTypes;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using Dominio;
@@ -47,5 +48,32 @@ namespace Negocio
                 datos.cerrarConexion();
             }
         }
+        public void agregarArticulo(Articulos articuloAgregado)
+        {
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                datos.setQuery("INSERT INTO ARTICULOS (Codigo, Nombre, Descripcion, IdMarca, IdCategoria, ImagenUrl, Precio) VALUES " +
+                    "('" + articuloAgregado.Codigo + "', '" +
+                     articuloAgregado.Nombre + "', '" +
+                     articuloAgregado.Descripcion + "', '" +
+                     "2" + "', '" +
+                     "3" + "', '" +
+                     "PRUEBA" + "', '" +
+                     "10')");
+                datos.ejecutarRead();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
     }
+
+    
 }
