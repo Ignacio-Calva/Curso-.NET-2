@@ -10,7 +10,6 @@ namespace Negocio
     public class MarcaNegocio
     {
         AccesoDatos datos = new AccesoDatos();
-
         public List<Marcas> listarMarcas()
         {
             List<Marcas> listaMarcas = new List<Marcas>();

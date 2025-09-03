@@ -28,6 +28,8 @@ namespace AplicacionEscritorio.Properties
                 objeto.Codigo = tbxCodigo.Text;
                 objeto.Nombre = tbxNombre.Text;
                 objeto.Descripcion = tbxDescripcion.Text;
+                objeto.IdCategoria = (int)comboCategoria.SelectedValue;
+                objeto.IdMarca = (int)comboMarca.SelectedValue;
                 negocio.agregarArticulo(objeto);
                 MessageBox.Show("Se agregó el articulo con exito!");
                 Close();

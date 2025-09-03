@@ -15,29 +15,47 @@ namespace AplicacionEscritorio
 {
     public partial class formPrincipal : Form
     {
+        List<Articulos> listaArt = new List<Articulos>();
         public formPrincipal()
-        { 
+        {
             InitializeComponent();
             cargarDgv();
         }
         public void cargarDgv()
         {
-            List<Articulos> listaArt = new List<Articulos>();
+            //La lista esta declarada como un atributo
             ArticuloNegocio negocioArt = new Negocio.ArticuloNegocio();
             listaArt = negocioArt.listarArticulos();
             dgvProductos.DataSource = listaArt;
             dgvProductos.Columns["UrlImagen"].Visible = false;
+            cargarImagen(listaArt[0].UrlImagen);
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             AgregarArticulo ventana = new AgregarArticulo();
             ventana.ShowDialog();
+            cargarDgv(); //Recargo la DGV para tenerla actualizada al haber agregado un articulo
         }
 
-        private void formPrincipal_Load(object sender, EventArgs e)
-        {
 
+        private void dgvProductos_SelectionChanged(object sender, EventArgs e)
+        {
+            Articulos aux = new Articulos();
+            aux = (Articulos)dgvProductos.CurrentRow.DataBoundItem;
+            cargarImagen(aux.UrlImagen);
+        }
+
+        private void cargarImagen(string urlImagen)
+        {
+            try
+            {
+                pbxArticulo.Load(urlImagen);
+            }
+            catch (Exception ex)
+            {
+                pbxArticulo.Load("https://imgs.search.brave.com/GoFaUzcpoaWIfsGMqByaylLvtEKMbDzzW-hC7myjZ_o/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/c2h1dHRlcnN0b2Nr/LmNvbS9pbWFnZS12/ZWN0b3IvZGVmYXVs/dC11aS1pbWFnZS1w/bGFjZWhvbGRlci13/aXJlZnJhbWVzLTI2/MG53LTEwMzc3MTkx/OTIuanBn");
+            }
         }
     }
 }

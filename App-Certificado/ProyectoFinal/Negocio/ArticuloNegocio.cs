@@ -30,7 +30,11 @@ namespace Negocio
                     aux.Descripcion = (string)datos.Lector["Descripcion"];
                     aux.IdMarca = (int)datos.Lector["IdMarca"];
                     aux.IdCategoria = (int)datos.Lector["IdCategoria"];
-                    aux.UrlImagen = (string)datos.Lector["ImagenUrl"];
+                    //Leo si la imagen NO es nula
+                    if (!(datos.Lector["ImagenUrl"] is DBNull))
+                        aux.UrlImagen = (string)datos.Lector["ImagenUrl"];
+                    else aux.UrlImagen = "Nulo";
+
                     aux.Precio = (decimal)datos.Lector["Precio"];
 
                     listaArticulos.Add(aux);
@@ -58,11 +62,11 @@ namespace Negocio
                     "('" + articuloAgregado.Codigo + "', '" +
                      articuloAgregado.Nombre + "', '" +
                      articuloAgregado.Descripcion + "', '" +
-                     "2" + "', '" +
-                     "3" + "', '" +
+                     articuloAgregado.IdCategoria + "', '" +
+                     articuloAgregado.IdMarca + "', '" +
                      "PRUEBA" + "', '" +
                      "10')");
-                datos.ejecutarRead();
+                datos.ejecutarAccion();
             }
             catch (Exception ex)
             {
