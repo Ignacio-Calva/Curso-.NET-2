@@ -59,6 +59,7 @@ namespace Negocio //Toda la informacion que necesito manipular desde la BDD
             {
                 conexion.Open();
                 comando.ExecuteNonQuery(); //Ejecuta la sentencia sin necesariamente cargarla en un lector
+                cerrarConexion();
             }
             catch (Exception ex)
             {

@@ -19,7 +19,8 @@ namespace Negocio
 
             try
             {
-                datos.setQuery("SELECT * From ARTICULOS");
+                datos.setQuery("Select A.Codigo, A.Nombre, A.Descripcion, C.Descripcion AS DescripcionCategoria, M.Descripcion AS DescripcionMarca, A.ImagenUrl, A.Precio from ARTICULOS A, CATEGORIAS C, MARCAS M where A.IdCategoria = C.Id AND A.IdMarca = M.Id");
+                //Consulta testeada en SQL antes
                 datos.ejecutarRead();
                 //Gracias al getter del lector puedo hacer este while
                 while (datos.Lector.Read())
@@ -28,12 +29,13 @@ namespace Negocio
                     aux.Codigo = (string)datos.Lector["Codigo"];
                     aux.Nombre = (string)datos.Lector["Nombre"];
                     aux.Descripcion = (string)datos.Lector["Descripcion"];
-                    aux.IdMarca = (int)datos.Lector["IdMarca"];
-                    aux.IdCategoria = (int)datos.Lector["IdCategoria"];
+                    aux.Marca = new Marcas();
+                    aux.Marca.Descripcion = (string)datos.Lector["DescripcionMarca"]; //USA EL NOMBRE QUE LE DI EN LA BDD
+                    aux.Categoria = new Categorias();
+                    aux.Categoria.Descripcion = (string)datos.Lector["DescripcionCategoria"];
                     //Leo si la imagen NO es nula
                     if (!(datos.Lector["ImagenUrl"] is DBNull))
                         aux.UrlImagen = (string)datos.Lector["ImagenUrl"];
-                    else aux.UrlImagen = "Nulo";
 
                     aux.Precio = (decimal)datos.Lector["Precio"];
 
@@ -62,8 +64,8 @@ namespace Negocio
                     "('" + articuloAgregado.Codigo + "', '" +
                      articuloAgregado.Nombre + "', '" +
                      articuloAgregado.Descripcion + "', '" +
-                     articuloAgregado.IdCategoria + "', '" +
-                     articuloAgregado.IdMarca + "', '" +
+                     articuloAgregado.Categoria.IdCategoria + "', '" +
+                     articuloAgregado.Marca.IdMarca + "', '" +
                      "PRUEBA" + "', '" +
                      "10')");
                 datos.ejecutarAccion();

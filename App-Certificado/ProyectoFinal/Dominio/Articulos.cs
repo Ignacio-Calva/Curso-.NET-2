@@ -16,9 +16,9 @@ namespace Dominio //Cada parte de la tabla que necesito recrear en el codigo
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
         [DisplayName("Marca")]
-        public int IdMarca { get; set; }
+        public Marcas Marca { get; set; }
         [DisplayName("Categoria")]
-        public int IdCategoria { get; set; }
+        public Categorias Categoria { get; set; }
         public string UrlImagen { get; set; }
         public decimal Precio { get; set; }
 

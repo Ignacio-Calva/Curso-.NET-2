@@ -12,7 +12,10 @@ namespace Dominio
         public int IdMarca { get; set; }
         public string Descripcion { get; set; }
 
-        //METODOS
-
+        //OVERRIDE DEL TO STRING PARA QUE SE MUESTRE EN LA GRILLA
+        public override string ToString()
+        {
+            return this.Descripcion;
+        }
     }
 }
