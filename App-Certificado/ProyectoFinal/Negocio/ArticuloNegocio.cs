@@ -66,8 +66,8 @@ namespace Negocio
                      articuloAgregado.Descripcion + "', '" +
                      articuloAgregado.Categoria.IdCategoria + "', '" +
                      articuloAgregado.Marca.IdMarca + "', '" +
-                     "PRUEBA" + "', '" +
-                     "10')");
+                     articuloAgregado.UrlImagen + "', '" +
+                     articuloAgregado.Precio +"')");
                 datos.ejecutarAccion();
             }
             catch (Exception ex)

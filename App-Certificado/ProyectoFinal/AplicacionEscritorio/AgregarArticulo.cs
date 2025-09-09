@@ -32,6 +32,8 @@ namespace AplicacionEscritorio.Properties
                 objeto.Categoria.IdCategoria = (int)comboCategoria.SelectedValue;
                 objeto.Marca = new Marcas();
                 objeto.Marca.IdMarca = (int)comboMarca.SelectedValue;
+                objeto.Precio = decimal.Parse(tbxPrecio.Text);
+                objeto.UrlImagen = tbxUrlImagen.Text;
                 negocio.agregarArticulo(objeto);
                 MessageBox.Show("Se agregó el articulo con exito!");
                 Close();
@@ -60,7 +62,7 @@ namespace AplicacionEscritorio.Properties
                 comboCategoria.DisplayMember = "Descripcion";
 
 
-                /////MARCA (PENDIENTE)
+                /////MARCA
                 comboMarca.DataSource = negocioMarca.listarMarcas();
                 comboMarca.ValueMember = "IdMarca";
                 comboMarca.DisplayMember = "Descripcion";

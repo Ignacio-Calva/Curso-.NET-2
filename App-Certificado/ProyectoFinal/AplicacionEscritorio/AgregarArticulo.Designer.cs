@@ -42,8 +42,9 @@
             this.comboMarca = new System.Windows.Forms.ComboBox();
             this.lblMarca = new System.Windows.Forms.Label();
             this.lblImagen = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbxPrecio = new System.Windows.Forms.TextBox();
             this.lblPrecio = new System.Windows.Forms.Label();
+            this.tbxUrlImagen = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lblCodigo
@@ -175,12 +176,12 @@
             this.lblImagen.TabIndex = 13;
             this.lblImagen.Text = "Imagen:";
             // 
-            // textBox1
+            // tbxPrecio
             // 
-            this.textBox1.Location = new System.Drawing.Point(70, 134);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(286, 20);
-            this.textBox1.TabIndex = 15;
+            this.tbxPrecio.Location = new System.Drawing.Point(70, 134);
+            this.tbxPrecio.Name = "tbxPrecio";
+            this.tbxPrecio.Size = new System.Drawing.Size(286, 20);
+            this.tbxPrecio.TabIndex = 15;
             // 
             // lblPrecio
             // 
@@ -192,12 +193,20 @@
             this.lblPrecio.TabIndex = 14;
             this.lblPrecio.Text = "Precio:";
             // 
+            // tbxUrlImagen
+            // 
+            this.tbxUrlImagen.Location = new System.Drawing.Point(376, 66);
+            this.tbxUrlImagen.Name = "tbxUrlImagen";
+            this.tbxUrlImagen.Size = new System.Drawing.Size(246, 20);
+            this.tbxUrlImagen.TabIndex = 16;
+            // 
             // AgregarArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(632, 254);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbxUrlImagen);
+            this.Controls.Add(this.tbxPrecio);
             this.Controls.Add(this.lblPrecio);
             this.Controls.Add(this.lblImagen);
             this.Controls.Add(this.comboMarca);
@@ -238,7 +247,8 @@
         private System.Windows.Forms.ComboBox comboMarca;
         private System.Windows.Forms.Label lblMarca;
         private System.Windows.Forms.Label lblImagen;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbxPrecio;
         private System.Windows.Forms.Label lblPrecio;
+        private System.Windows.Forms.TextBox tbxUrlImagen;
     }
 }

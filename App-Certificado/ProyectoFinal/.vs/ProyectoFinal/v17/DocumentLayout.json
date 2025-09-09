@@ -3,40 +3,44 @@
   "WorkspaceRootPath": "D:\\Facultad\\Maxi Programa C# 2\\Ejercitacion\\Curso-.NET-2\\App-Certificado\\ProyectoFinal\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DDD1636A-FFA7-41DD-A239-D7A181972C2E}|AplicacionEscritorio\\AplicacionEscritorio.csproj|d:\\facultad\\maxi programa c# 2\\ejercitacion\\curso-.net-2\\app-certificado\\proyectofinal\\aplicacionescritorio\\agregararticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{DDD1636A-FFA7-41DD-A239-D7A181972C2E}|AplicacionEscritorio\\AplicacionEscritorio.csproj|solutionrelative:aplicacionescritorio\\agregararticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{29561171-3F6E-464C-BE67-720E9C6D841F}|Negocio\\Negocio.csproj|D:\\Facultad\\Maxi Programa C# 2\\Ejercitacion\\Curso-.NET-2\\App-Certificado\\ProyectoFinal\\negocio\\articulonegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29561171-3F6E-464C-BE67-720E9C6D841F}|Negocio\\Negocio.csproj|solutionrelative:negocio\\articulonegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA209C47-1FD8-4C20-A964-8C7F42AD9B1C}|Dominio\\Dominio.csproj|d:\\facultad\\maxi programa c# 2\\ejercitacion\\curso-.net-2\\app-certificado\\proyectofinal\\dominio\\articulos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA209C47-1FD8-4C20-A964-8C7F42AD9B1C}|Dominio\\Dominio.csproj|solutionrelative:dominio\\articulos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DDD1636A-FFA7-41DD-A239-D7A181972C2E}|AplicacionEscritorio\\AplicacionEscritorio.csproj|D:\\Facultad\\Maxi Programa C# 2\\Ejercitacion\\Curso-.NET-2\\App-Certificado\\ProyectoFinal\\aplicacionescritorio\\agregararticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DDD1636A-FFA7-41DD-A239-D7A181972C2E}|AplicacionEscritorio\\AplicacionEscritorio.csproj|solutionrelative:aplicacionescritorio\\agregararticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DDD1636A-FFA7-41DD-A239-D7A181972C2E}|AplicacionEscritorio\\AplicacionEscritorio.csproj|D:\\Facultad\\Maxi Programa C# 2\\Ejercitacion\\Curso-.NET-2\\App-Certificado\\ProyectoFinal\\aplicacionescritorio\\formprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{DDD1636A-FFA7-41DD-A239-D7A181972C2E}|AplicacionEscritorio\\AplicacionEscritorio.csproj|solutionrelative:aplicacionescritorio\\formprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{DDD1636A-FFA7-41DD-A239-D7A181972C2E}|AplicacionEscritorio\\AplicacionEscritorio.csproj|d:\\facultad\\maxi programa c# 2\\ejercitacion\\curso-.net-2\\app-certificado\\proyectofinal\\aplicacionescritorio\\agregararticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DDD1636A-FFA7-41DD-A239-D7A181972C2E}|AplicacionEscritorio\\AplicacionEscritorio.csproj|solutionrelative:aplicacionescritorio\\agregararticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{29561171-3F6E-464C-BE67-720E9C6D841F}|Negocio\\Negocio.csproj|D:\\Facultad\\Maxi Programa C# 2\\Ejercitacion\\Curso-.NET-2\\App-Certificado\\ProyectoFinal\\negocio\\articulonegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{29561171-3F6E-464C-BE67-720E9C6D841F}|Negocio\\Negocio.csproj|solutionrelative:negocio\\articulonegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DDD1636A-FFA7-41DD-A239-D7A181972C2E}|AplicacionEscritorio\\AplicacionEscritorio.csproj|d:\\facultad\\maxi programa c# 2\\ejercitacion\\curso-.net-2\\app-certificado\\proyectofinal\\aplicacionescritorio\\modificararticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DDD1636A-FFA7-41DD-A239-D7A181972C2E}|AplicacionEscritorio\\AplicacionEscritorio.csproj|solutionrelative:aplicacionescritorio\\modificararticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DDD1636A-FFA7-41DD-A239-D7A181972C2E}|AplicacionEscritorio\\AplicacionEscritorio.csproj|D:\\Facultad\\Maxi Programa C# 2\\Ejercitacion\\Curso-.NET-2\\App-Certificado\\ProyectoFinal\\aplicacionescritorio\\formprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DDD1636A-FFA7-41DD-A239-D7A181972C2E}|AplicacionEscritorio\\AplicacionEscritorio.csproj|solutionrelative:aplicacionescritorio\\formprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{29561171-3F6E-464C-BE67-720E9C6D841F}|Negocio\\Negocio.csproj|D:\\Facultad\\Maxi Programa C# 2\\Ejercitacion\\Curso-.NET-2\\App-Certificado\\ProyectoFinal\\negocio\\categorianegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{29561171-3F6E-464C-BE67-720E9C6D841F}|Negocio\\Negocio.csproj|solutionrelative:negocio\\categorianegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FA209C47-1FD8-4C20-A964-8C7F42AD9B1C}|Dominio\\Dominio.csproj|d:\\facultad\\maxi programa c# 2\\ejercitacion\\curso-.net-2\\app-certificado\\proyectofinal\\dominio\\categorias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FA209C47-1FD8-4C20-A964-8C7F42AD9B1C}|Dominio\\Dominio.csproj|D:\\Facultad\\Maxi Programa C# 2\\Ejercitacion\\Curso-.NET-2\\App-Certificado\\ProyectoFinal\\dominio\\categorias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FA209C47-1FD8-4C20-A964-8C7F42AD9B1C}|Dominio\\Dominio.csproj|solutionrelative:dominio\\categorias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FA209C47-1FD8-4C20-A964-8C7F42AD9B1C}|Dominio\\Dominio.csproj|d:\\facultad\\maxi programa c# 2\\ejercitacion\\curso-.net-2\\app-certificado\\proyectofinal\\dominio\\marcas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FA209C47-1FD8-4C20-A964-8C7F42AD9B1C}|Dominio\\Dominio.csproj|D:\\Facultad\\Maxi Programa C# 2\\Ejercitacion\\Curso-.NET-2\\App-Certificado\\ProyectoFinal\\dominio\\marcas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FA209C47-1FD8-4C20-A964-8C7F42AD9B1C}|Dominio\\Dominio.csproj|solutionrelative:dominio\\marcas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DDD1636A-FFA7-41DD-A239-D7A181972C2E}|AplicacionEscritorio\\AplicacionEscritorio.csproj|D:\\Facultad\\Maxi Programa C# 2\\Ejercitacion\\Curso-.NET-2\\App-Certificado\\ProyectoFinal\\aplicacionescritorio\\formprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DDD1636A-FFA7-41DD-A239-D7A181972C2E}|AplicacionEscritorio\\AplicacionEscritorio.csproj|solutionrelative:aplicacionescritorio\\formprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FA209C47-1FD8-4C20-A964-8C7F42AD9B1C}|Dominio\\Dominio.csproj|D:\\Facultad\\Maxi Programa C# 2\\Ejercitacion\\Curso-.NET-2\\App-Certificado\\ProyectoFinal\\dominio\\articulos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FA209C47-1FD8-4C20-A964-8C7F42AD9B1C}|Dominio\\Dominio.csproj|solutionrelative:dominio\\articulos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{29561171-3F6E-464C-BE67-720E9C6D841F}|Negocio\\Negocio.csproj|D:\\Facultad\\Maxi Programa C# 2\\Ejercitacion\\Curso-.NET-2\\App-Certificado\\ProyectoFinal\\negocio\\marcanegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -50,7 +54,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -58,7 +62,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "Articulos.cs",
+              "DocumentMoniker": "D:\\Facultad\\Maxi Programa C# 2\\Ejercitacion\\Curso-.NET-2\\App-Certificado\\ProyectoFinal\\Dominio\\Articulos.cs",
+              "RelativeDocumentMoniker": "Dominio\\Articulos.cs",
+              "ToolTip": "D:\\Facultad\\Maxi Programa C# 2\\Ejercitacion\\Curso-.NET-2\\App-Certificado\\ProyectoFinal\\Dominio\\Articulos.cs",
+              "RelativeToolTip": "Dominio\\Articulos.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-09T12:21:51.202Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ModificarArticulo.cs [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\Facultad\\Maxi Programa C# 2\\Ejercitacion\\Curso-.NET-2\\App-Certificado\\ProyectoFinal\\AplicacionEscritorio\\ModificarArticulo.cs",
+              "RelativeDocumentMoniker": "AplicacionEscritorio\\ModificarArticulo.cs",
+              "ToolTip": "D:\\Facultad\\Maxi Programa C# 2\\Ejercitacion\\Curso-.NET-2\\App-Certificado\\ProyectoFinal\\AplicacionEscritorio\\ModificarArticulo.cs [Dise\u00F1o]",
+              "RelativeToolTip": "AplicacionEscritorio\\ModificarArticulo.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-09T12:16:45.289Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "AgregarArticulo.cs [Dise\u00F1o]",
               "DocumentMoniker": "D:\\Facultad\\Maxi Programa C# 2\\Ejercitacion\\Curso-.NET-2\\App-Certificado\\ProyectoFinal\\AplicacionEscritorio\\AgregarArticulo.cs",
               "RelativeDocumentMoniker": "AplicacionEscritorio\\AgregarArticulo.cs",
@@ -70,20 +99,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "AgregarArticulo.cs",
               "DocumentMoniker": "D:\\Facultad\\Maxi Programa C# 2\\Ejercitacion\\Curso-.NET-2\\App-Certificado\\ProyectoFinal\\AplicacionEscritorio\\AgregarArticulo.cs",
               "RelativeDocumentMoniker": "AplicacionEscritorio\\AgregarArticulo.cs",
               "ToolTip": "D:\\Facultad\\Maxi Programa C# 2\\Ejercitacion\\Curso-.NET-2\\App-Certificado\\ProyectoFinal\\AplicacionEscritorio\\AgregarArticulo.cs",
               "RelativeToolTip": "AplicacionEscritorio\\AgregarArticulo.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAawCMAAABEAAAAAAAAAA==",
+              "ViewState": "AgIAABEAAAAAAAAAAAAawCQAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-26T21:13:00.762Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "ArticuloNegocio.cs",
+              "DocumentMoniker": "D:\\Facultad\\Maxi Programa C# 2\\Ejercitacion\\Curso-.NET-2\\App-Certificado\\ProyectoFinal\\Negocio\\ArticuloNegocio.cs",
+              "RelativeDocumentMoniker": "Negocio\\ArticuloNegocio.cs",
+              "ToolTip": "D:\\Facultad\\Maxi Programa C# 2\\Ejercitacion\\Curso-.NET-2\\App-Certificado\\ProyectoFinal\\Negocio\\ArticuloNegocio.cs",
+              "RelativeToolTip": "Negocio\\ArticuloNegocio.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAmwEUAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-03T19:19:51.64Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "formPrincipal.cs [Dise\u00F1o]",
               "DocumentMoniker": "D:\\Facultad\\Maxi Programa C# 2\\Ejercitacion\\Curso-.NET-2\\App-Certificado\\ProyectoFinal\\AplicacionEscritorio\\formPrincipal.cs",
               "RelativeDocumentMoniker": "AplicacionEscritorio\\formPrincipal.cs",
@@ -95,7 +137,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "CategoriaNegocio.cs",
               "DocumentMoniker": "D:\\Facultad\\Maxi Programa C# 2\\Ejercitacion\\Curso-.NET-2\\App-Certificado\\ProyectoFinal\\Negocio\\CategoriaNegocio.cs",
               "RelativeDocumentMoniker": "Negocio\\CategoriaNegocio.cs",
@@ -103,25 +145,11 @@
               "RelativeToolTip": "Negocio\\CategoriaNegocio.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAAA0AAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-02T22:03:51.203Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-02T22:03:51.203Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ArticuloNegocio.cs",
-              "DocumentMoniker": "D:\\Facultad\\Maxi Programa C# 2\\Ejercitacion\\Curso-.NET-2\\App-Certificado\\ProyectoFinal\\Negocio\\ArticuloNegocio.cs",
-              "RelativeDocumentMoniker": "Negocio\\ArticuloNegocio.cs",
-              "ToolTip": "D:\\Facultad\\Maxi Programa C# 2\\Ejercitacion\\Curso-.NET-2\\App-Certificado\\ProyectoFinal\\Negocio\\ArticuloNegocio.cs",
-              "RelativeToolTip": "Negocio\\ArticuloNegocio.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAgwDgAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-03T19:19:51.64Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "Categorias.cs",
               "DocumentMoniker": "D:\\Facultad\\Maxi Programa C# 2\\Ejercitacion\\Curso-.NET-2\\App-Certificado\\ProyectoFinal\\Dominio\\Categorias.cs",
               "RelativeDocumentMoniker": "Dominio\\Categorias.cs",
@@ -129,12 +157,11 @@
               "RelativeToolTip": "Dominio\\Categorias.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-03T21:03:39.124Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-03T21:03:39.124Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "Marcas.cs",
               "DocumentMoniker": "D:\\Facultad\\Maxi Programa C# 2\\Ejercitacion\\Curso-.NET-2\\App-Certificado\\ProyectoFinal\\Dominio\\Marcas.cs",
               "RelativeDocumentMoniker": "Dominio\\Marcas.cs",
@@ -142,12 +169,11 @@
               "RelativeToolTip": "Dominio\\Marcas.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-03T21:05:35.015Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-03T21:05:35.015Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "formPrincipal.cs",
               "DocumentMoniker": "D:\\Facultad\\Maxi Programa C# 2\\Ejercitacion\\Curso-.NET-2\\App-Certificado\\ProyectoFinal\\AplicacionEscritorio\\formPrincipal.cs",
               "RelativeDocumentMoniker": "AplicacionEscritorio\\formPrincipal.cs",
@@ -160,20 +186,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Articulos.cs",
-              "DocumentMoniker": "D:\\Facultad\\Maxi Programa C# 2\\Ejercitacion\\Curso-.NET-2\\App-Certificado\\ProyectoFinal\\Dominio\\Articulos.cs",
-              "RelativeDocumentMoniker": "Dominio\\Articulos.cs",
-              "ToolTip": "D:\\Facultad\\Maxi Programa C# 2\\Ejercitacion\\Curso-.NET-2\\App-Certificado\\ProyectoFinal\\Dominio\\Articulos.cs",
-              "RelativeToolTip": "Dominio\\Articulos.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T21:37:16.105Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "MarcaNegocio.cs",
               "DocumentMoniker": "D:\\Facultad\\Maxi Programa C# 2\\Ejercitacion\\Curso-.NET-2\\App-Certificado\\ProyectoFinal\\Negocio\\MarcaNegocio.cs",
               "RelativeDocumentMoniker": "Negocio\\MarcaNegocio.cs",
