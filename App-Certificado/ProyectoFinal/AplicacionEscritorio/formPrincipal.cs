@@ -28,6 +28,7 @@ namespace AplicacionEscritorio
             listaArt = negocioArt.listarArticulos();
             dgvProductos.DataSource = listaArt;
             dgvProductos.Columns["UrlImagen"].Visible = false;
+            dgvProductos.Columns["IdArticulo"].Visible = false; 
             cargarImagen(listaArt[0].UrlImagen);
         }
 
@@ -52,10 +53,19 @@ namespace AplicacionEscritorio
             {
                 pbxArticulo.Load(urlImagen);
             }
-            catch (Exception ex)
+            catch
             {
                 pbxArticulo.Load("https://imgs.search.brave.com/GoFaUzcpoaWIfsGMqByaylLvtEKMbDzzW-hC7myjZ_o/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/c2h1dHRlcnN0b2Nr/LmNvbS9pbWFnZS12/ZWN0b3IvZGVmYXVs/dC11aS1pbWFnZS1w/bGFjZWhvbGRlci13/aXJlZnJhbWVzLTI2/MG53LTEwMzc3MTkx/OTIuanBn");
             }
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            Articulos articuloSeleccionado = new Articulos();
+            articuloSeleccionado = (Articulos)dgvProductos.CurrentRow.DataBoundItem;
+            AgregarArticulo modificar = new AgregarArticulo(articuloSeleccionado);
+            modificar.ShowDialog();
+            cargarDgv();
         }
     }
 }

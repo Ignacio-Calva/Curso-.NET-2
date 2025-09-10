@@ -14,4 +14,3 @@ D:\Facultad\Maxi Programa C# 2\Ejercitacion\Curso-.NET-2\App-Certificado\Proyect
 D:\Facultad\Maxi Programa C# 2\Ejercitacion\Curso-.NET-2\App-Certificado\ProyectoFinal\AplicacionEscritorio\bin\Debug\Negocio.pdb
 D:\Facultad\Maxi Programa C# 2\Ejercitacion\Curso-.NET-2\App-Certificado\ProyectoFinal\AplicacionEscritorio\obj\Debug\Aplicaci.24FAC79F.Up2Date
 D:\Facultad\Maxi Programa C# 2\Ejercitacion\Curso-.NET-2\App-Certificado\ProyectoFinal\AplicacionEscritorio\obj\Debug\AplicacionEscritorio.Properties.AgregarArticulo.resources
-D:\Facultad\Maxi Programa C# 2\Ejercitacion\Curso-.NET-2\App-Certificado\ProyectoFinal\AplicacionEscritorio\obj\Debug\AplicacionEscritorio.ModificarArticulo.resources

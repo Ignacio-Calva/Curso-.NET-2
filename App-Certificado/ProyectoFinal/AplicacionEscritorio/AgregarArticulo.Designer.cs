@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.lblCodigo = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblAgregar = new System.Windows.Forms.Label();
             this.tbxCodigo = new System.Windows.Forms.TextBox();
             this.tbxNombre = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
@@ -45,6 +45,9 @@
             this.tbxPrecio = new System.Windows.Forms.TextBox();
             this.lblPrecio = new System.Windows.Forms.Label();
             this.tbxUrlImagen = new System.Windows.Forms.TextBox();
+            this.lblPreview = new System.Windows.Forms.Label();
+            this.pbxPreview = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxPreview)).BeginInit();
             this.SuspendLayout();
             // 
             // lblCodigo
@@ -57,15 +60,15 @@
             this.lblCodigo.TabIndex = 0;
             this.lblCodigo.Text = "Codigo:";
             // 
-            // label1
+            // lblAgregar
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(209, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(243, 25);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "AGREGAR ARTICULO";
+            this.lblAgregar.AutoSize = true;
+            this.lblAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAgregar.Location = new System.Drawing.Point(209, 9);
+            this.lblAgregar.Name = "lblAgregar";
+            this.lblAgregar.Size = new System.Drawing.Size(243, 25);
+            this.lblAgregar.TabIndex = 1;
+            this.lblAgregar.Text = "AGREGAR ARTICULO";
             // 
             // tbxCodigo
             // 
@@ -170,7 +173,7 @@
             // 
             this.lblImagen.AutoSize = true;
             this.lblImagen.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblImagen.Location = new System.Drawing.Point(418, 50);
+            this.lblImagen.Location = new System.Drawing.Point(374, 50);
             this.lblImagen.Name = "lblImagen";
             this.lblImagen.Size = new System.Drawing.Size(52, 13);
             this.lblImagen.TabIndex = 13;
@@ -195,16 +198,38 @@
             // 
             // tbxUrlImagen
             // 
-            this.tbxUrlImagen.Location = new System.Drawing.Point(376, 66);
+            this.tbxUrlImagen.Location = new System.Drawing.Point(432, 47);
             this.tbxUrlImagen.Name = "tbxUrlImagen";
-            this.tbxUrlImagen.Size = new System.Drawing.Size(246, 20);
+            this.tbxUrlImagen.Size = new System.Drawing.Size(194, 20);
             this.tbxUrlImagen.TabIndex = 16;
+            this.tbxUrlImagen.TextChanged += new System.EventHandler(this.tbxUrlImagen_TextChanged);
+            // 
+            // lblPreview
+            // 
+            this.lblPreview.AutoSize = true;
+            this.lblPreview.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPreview.Location = new System.Drawing.Point(475, 76);
+            this.lblPreview.Name = "lblPreview";
+            this.lblPreview.Size = new System.Drawing.Size(52, 13);
+            this.lblPreview.TabIndex = 17;
+            this.lblPreview.Text = "Preview";
+            // 
+            // pbxPreview
+            // 
+            this.pbxPreview.Location = new System.Drawing.Point(442, 92);
+            this.pbxPreview.Name = "pbxPreview";
+            this.pbxPreview.Size = new System.Drawing.Size(119, 110);
+            this.pbxPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxPreview.TabIndex = 18;
+            this.pbxPreview.TabStop = false;
             // 
             // AgregarArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(632, 254);
+            this.Controls.Add(this.pbxPreview);
+            this.Controls.Add(this.lblPreview);
             this.Controls.Add(this.tbxUrlImagen);
             this.Controls.Add(this.tbxPrecio);
             this.Controls.Add(this.lblPrecio);
@@ -220,12 +245,13 @@
             this.Controls.Add(this.tbxNombre);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.tbxCodigo);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblAgregar);
             this.Controls.Add(this.lblCodigo);
             this.Name = "AgregarArticulo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AgregarArticulo";
             this.Load += new System.EventHandler(this.AgregarArticulo_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pbxPreview)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -234,7 +260,7 @@
         #endregion
 
         private System.Windows.Forms.Label lblCodigo;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblAgregar;
         private System.Windows.Forms.TextBox tbxCodigo;
         private System.Windows.Forms.TextBox tbxNombre;
         private System.Windows.Forms.Label lblNombre;
@@ -250,5 +276,7 @@
         private System.Windows.Forms.TextBox tbxPrecio;
         private System.Windows.Forms.Label lblPrecio;
         private System.Windows.Forms.TextBox tbxUrlImagen;
+        private System.Windows.Forms.Label lblPreview;
+        private System.Windows.Forms.PictureBox pbxPreview;
     }
 }
