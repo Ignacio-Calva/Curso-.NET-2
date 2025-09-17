@@ -67,5 +67,26 @@ namespace AplicacionEscritorio
             modificar.ShowDialog();
             cargarDgv();
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            ArticuloNegocio negocio = new ArticuloNegocio();
+            Articulos seleccionado;
+            try
+            {
+                DialogResult eleccion;
+                eleccion = MessageBox.Show("Estas seguro que deseas eliminar el articulo?", "ATENCION", MessageBoxButtons.YesNo);
+                if (eleccion == DialogResult.Yes)
+                {
+                    seleccionado = (Articulos)dgvProductos.CurrentRow.DataBoundItem;
+                    negocio.eliminarArticulos(seleccionado);
+                    cargarDgv();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
     }
 }
