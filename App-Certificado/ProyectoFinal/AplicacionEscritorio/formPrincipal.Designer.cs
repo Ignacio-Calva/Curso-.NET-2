@@ -35,6 +35,9 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.pbxArticulo = new System.Windows.Forms.PictureBox();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.tbxFiltro = new System.Windows.Forms.TextBox();
+            this.lblFiltro = new System.Windows.Forms.Label();
+            this.btnFiltrar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxArticulo)).BeginInit();
             this.SuspendLayout();
@@ -99,11 +102,40 @@
             this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
+            // tbxFiltro
+            // 
+            this.tbxFiltro.Location = new System.Drawing.Point(50, 12);
+            this.tbxFiltro.Name = "tbxFiltro";
+            this.tbxFiltro.Size = new System.Drawing.Size(277, 20);
+            this.tbxFiltro.TabIndex = 5;
+            // 
+            // lblFiltro
+            // 
+            this.lblFiltro.AutoSize = true;
+            this.lblFiltro.Location = new System.Drawing.Point(12, 15);
+            this.lblFiltro.Name = "lblFiltro";
+            this.lblFiltro.Size = new System.Drawing.Size(32, 13);
+            this.lblFiltro.TabIndex = 6;
+            this.lblFiltro.Text = "Filtro:";
+            // 
+            // btnFiltrar
+            // 
+            this.btnFiltrar.Location = new System.Drawing.Point(347, 8);
+            this.btnFiltrar.Name = "btnFiltrar";
+            this.btnFiltrar.Size = new System.Drawing.Size(75, 23);
+            this.btnFiltrar.TabIndex = 7;
+            this.btnFiltrar.Text = "Filtrar";
+            this.btnFiltrar.UseVisualStyleBackColor = true;
+            this.btnFiltrar.Click += new System.EventHandler(this.btnFiltrar_Click);
+            // 
             // formPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(896, 356);
+            this.Controls.Add(this.btnFiltrar);
+            this.Controls.Add(this.lblFiltro);
+            this.Controls.Add(this.tbxFiltro);
             this.Controls.Add(this.pbxArticulo);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnModificar);
@@ -115,6 +147,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxArticulo)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -126,6 +159,9 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.PictureBox pbxArticulo;
         private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.TextBox tbxFiltro;
+        private System.Windows.Forms.Label lblFiltro;
+        private System.Windows.Forms.Button btnFiltrar;
     }
 }
 

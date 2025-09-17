@@ -27,8 +27,7 @@ namespace AplicacionEscritorio
             ArticuloNegocio negocioArt = new Negocio.ArticuloNegocio();
             listaArt = negocioArt.listarArticulos();
             dgvProductos.DataSource = listaArt;
-            dgvProductos.Columns["UrlImagen"].Visible = false;
-            dgvProductos.Columns["IdArticulo"].Visible = false; 
+            ocultarColumnas();
             cargarImagen(listaArt[0].UrlImagen);
         }
 
@@ -43,8 +42,11 @@ namespace AplicacionEscritorio
         private void dgvProductos_SelectionChanged(object sender, EventArgs e)
         {
             Articulos aux = new Articulos();
-            aux = (Articulos)dgvProductos.CurrentRow.DataBoundItem;
-            cargarImagen(aux.UrlImagen);
+            if (aux == null)
+            {
+                aux = (Articulos)dgvProductos.CurrentRow.DataBoundItem;
+                cargarImagen(aux.UrlImagen);
+            }
         }
 
         private void cargarImagen(string urlImagen)
@@ -87,6 +89,35 @@ namespace AplicacionEscritorio
             {
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void btnFiltrar_Click(object sender, EventArgs e)
+        {
+            List<Articulos> listaFiltrada;
+            string filtro = tbxFiltro.Text;
+            try
+            {
+                if (filtro != "")
+                {
+                    listaFiltrada = listaArt.FindAll(Articulo => Articulo.Nombre.ToUpper().Contains(filtro.ToUpper()));
+                }
+                else
+                {
+                    listaFiltrada = listaArt;
+                }
+                dgvProductos.DataSource = null;
+                dgvProductos.DataSource = listaFiltrada;
+                ocultarColumnas();
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+        private void ocultarColumnas()
+        {
+            dgvProductos.Columns["UrlImagen"].Visible = false;
+            dgvProductos.Columns["IdArticulo"].Visible = false;
         }
     }
 }
