@@ -20,6 +20,8 @@ namespace AplicacionEscritorio
         {
             InitializeComponent();
             cargarDgv();
+            cargarComboBox();
+
         }
         public void cargarDgv()
         {
@@ -68,6 +70,7 @@ namespace AplicacionEscritorio
             AgregarArticulo modificar = new AgregarArticulo(articuloSeleccionado);
             modificar.ShowDialog();
             cargarDgv();
+            ocultarColumnas();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -93,11 +96,27 @@ namespace AplicacionEscritorio
 
         private void btnFiltrar_Click(object sender, EventArgs e)
         {
+            ArticuloNegocio negocio = new ArticuloNegocio();
+            string campo = cbxCampo.SelectedItem.ToString();
+            string criterio = cbxCriterio.SelectedItem.ToString();
+            string filtro = tbxValor.Text;
+            listaArt = negocio.filtrarArticulos(campo, criterio, filtro);
+            dgvProductos.DataSource = null;
+            dgvProductos.DataSource = listaArt;
+        }
+        private void ocultarColumnas()
+        {
+            dgvProductos.Columns["UrlImagen"].Visible = false;
+            dgvProductos.Columns["IdArticulo"].Visible = false;
+        }
+
+        private void tbxFiltro_TextChanged(object sender, EventArgs e)
+        {
             List<Articulos> listaFiltrada;
             string filtro = tbxFiltro.Text;
             try
             {
-                if (filtro != "")
+                if (filtro.Length >= 3)
                 {
                     listaFiltrada = listaArt.FindAll(Articulo => Articulo.Nombre.ToUpper().Contains(filtro.ToUpper()));
                 }
@@ -111,13 +130,22 @@ namespace AplicacionEscritorio
             }
             catch (Exception ex)
             {
-
+                throw ex;
             }
         }
-        private void ocultarColumnas()
+        
+        private void cargarComboBox()
         {
-            dgvProductos.Columns["UrlImagen"].Visible = false;
-            dgvProductos.Columns["IdArticulo"].Visible = false;
+            ///CAMPO
+            cbxCampo.Items.Add("Codigo");
+            cbxCampo.Items.Add("Nombre");
+            cbxCampo.Items.Add("Descripcion");
+            cbxCampo.Items.Add("Marca");
+            cbxCampo.Items.Add("Categoria");
+            cbxCampo.Items.Add("Precio");
+
+            ///CRITERIO
+            cbxCriterio.Items.Add("Contiene");
         }
     }
 }

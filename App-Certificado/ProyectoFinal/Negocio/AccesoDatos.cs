@@ -46,7 +46,6 @@ namespace Negocio //Toda la informacion que necesito manipular desde la BDD
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
         }

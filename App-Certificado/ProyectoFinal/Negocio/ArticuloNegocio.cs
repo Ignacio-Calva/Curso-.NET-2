@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data.SqlTypes;
 using System.Linq;
@@ -126,6 +127,123 @@ namespace Negocio
             {
                 datos.cerrarConexion();
             }
+        }
+
+        public List<Articulos> filtrarArticulos(string Campo, string Criterio, string Filtros)
+        {
+            List<Articulos> listaFiltrada = new List<Articulos>();
+            AccesoDatos datos = new AccesoDatos();
+            string query = "Select A.Id, A.Codigo, A.Nombre, A.Descripcion,C.Id AS IdCategoria, C.Descripcion AS DescripcionCategoria, M.Id AS IdMarca, M.Descripcion AS DescripcionMarca, A.ImagenUrl, A.Precio from ARTICULOS A, CATEGORIAS C, MARCAS M where A.IdCategoria = C.Id AND A.IdMarca = M.Id AND ";
+            try
+            {
+                switch(Campo)
+                {
+                    case "Codigo":
+                        {
+                            switch (Criterio)
+                            {
+                                case "Comienza con":
+                                    {
+                                        query += "A.Codigo like '" + Filtros + "%'";
+                                        break;
+                                    }
+                                case "Termina con":
+                                    {
+                                        query += "A.Codigo like '%" + Filtros + "'";
+                                        break;
+                                    }
+                                default:
+                                    {
+                                        query += "A.Codigo like '%" + Filtros + "%'";
+                                        break;
+                                    }
+
+                            }
+                            break;
+                        }
+                    case "Nombre":
+                        switch (Criterio)
+                        {
+                            case "Comienza con":
+                                {
+                                    query += "A.Nombre like '" + Filtros + "%'";
+                                    break;
+                                }
+                            case "Termina con":
+                                {
+                                    query += "A.Nombre like '%" + Filtros + "'";
+                                    break;
+                                }
+                            default:
+                                {
+                                    query += "A.Nombre like '%" + Filtros + "%'";
+                                    break;
+                                }
+
+                        }
+                        break;
+                    case "Precio":
+                        {
+                            switch (Criterio)
+                            {
+                                case "Mayor a":
+                                    {
+                                        query += "A.Precio > " + Filtros;
+                                        break;
+                                    }
+                                case "Menor a":
+                                    {
+                                        query += "A.Precio < " + Filtros;
+                                        break;
+                                    }
+                                default:
+                                    {
+                                        query += "A.Precio = " + Filtros;
+                                        break;
+                                    }
+                            }
+                            break;
+                        }
+                    default:
+                        {
+                            break;
+                        }
+                        
+                        
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+            datos.setQuery(query);
+            datos.ejecutarRead();
+            while (datos.Lector.Read())
+            {
+                Articulos aux = new Articulos();
+                aux.IdArticulo = (int)datos.Lector["Id"];
+                aux.Codigo = (string)datos.Lector["Codigo"];
+                aux.Nombre = (string)datos.Lector["Nombre"];
+                aux.Descripcion = (string)datos.Lector["Descripcion"];
+                aux.Marca = new Marcas();
+                aux.Marca.IdMarca = (int)datos.Lector["IdMarca"];
+                aux.Marca.Descripcion = (string)datos.Lector["DescripcionMarca"]; //USA EL NOMBRE QUE LE DI EN LA BDD
+                aux.Categoria = new Categorias();
+                aux.Categoria.IdCategoria = (int)datos.Lector["IdCategoria"];
+                aux.Categoria.Descripcion = (string)datos.Lector["DescripcionCategoria"];
+                //Leo si la imagen NO es nula
+                if (!(datos.Lector["ImagenUrl"] is DBNull))
+                    aux.UrlImagen = (string)datos.Lector["ImagenUrl"];
+
+                aux.Precio = (decimal)datos.Lector["Precio"];
+
+                listaFiltrada.Add(aux);
+            }
+            return listaFiltrada;
         }
     }
 
