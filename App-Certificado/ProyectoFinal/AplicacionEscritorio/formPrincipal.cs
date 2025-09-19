@@ -103,6 +103,7 @@ namespace AplicacionEscritorio
             listaArt = negocio.filtrarArticulos(campo, criterio, filtro);
             dgvProductos.DataSource = null;
             dgvProductos.DataSource = listaArt;
+            ocultarColumnas();
         }
         private void ocultarColumnas()
         {
@@ -143,9 +144,27 @@ namespace AplicacionEscritorio
             cbxCampo.Items.Add("Marca");
             cbxCampo.Items.Add("Categoria");
             cbxCampo.Items.Add("Precio");
+        }
 
-            ///CRITERIO
-            cbxCriterio.Items.Add("Contiene");
+        private void cbxCampo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //CARGAR CBX CRITERIO
+            if (cbxCampo.SelectedItem.ToString() == "Precio")
+            {
+                cbxCriterio.Items.Clear();
+                cbxCriterio.Items.Add("Mayor a");
+                cbxCriterio.Items.Add("Menor a");
+                cbxCriterio.Items.Add("Igual a");
+                cbxCriterio.SelectedItem = "Igual a";
+            }
+            else
+            {
+                cbxCriterio.Items.Clear();
+                cbxCriterio.Items.Add("Comienza con");
+                cbxCriterio.Items.Add("Termina con");
+                cbxCriterio.Items.Add("Contiene");
+                cbxCriterio.SelectedItem = "Contiene";
+            }
         }
     }
 }

@@ -182,6 +182,71 @@ namespace Negocio
 
                         }
                         break;
+
+                    case "Descripcion":
+                        switch (Criterio)
+                        {
+                            case "Comienza con":
+                                {
+                                    query += "A.Descripcion like '" + Filtros + "%'";
+                                    break;
+                                }
+                            case "Termina con":
+                                {
+                                    query += "A.Descripcion like '%" + Filtros + "'";
+                                    break;
+                                }
+                            default:
+                                {
+                                    query += "A.Descripcion like '%" + Filtros + "%'";
+                                    break;
+                                }
+                        }
+                        break;
+
+                    case "Marca":
+                        switch (Criterio)
+                        {
+                            case "Comienza con":
+                                {
+                                    query += "M.Descripcion like '" + Filtros + "%'";
+                                    break;
+                                }
+                            case "Termina con":
+                                {
+                                    query += "M.Descripcion like '%" + Filtros + "'";
+                                    break;
+                                }
+                            default:
+                                {
+                                    query += "M.Descripcion like '%" + Filtros + "%'";
+                                    break;
+                                }
+                        }
+                        break;
+
+                    case "Categoria":
+                        switch (Criterio)
+                        {
+                            case "Comienza con":
+                                {
+                                    query += "C.Descripcion like '" + Filtros + "%'";
+                                    break;
+                                }
+                            case "Termina con":
+                                {
+                                    query += "C.Descripcion like '%" + Filtros + "'";
+                                    break;
+                                }
+                            default:
+                                {
+                                    query += "C.Descripcion like '%" + Filtros + "%'";
+                                    break;
+                                }
+                        }
+                        break;
+
+                    ///PRECIO
                     case "Precio":
                         {
                             switch (Criterio)
