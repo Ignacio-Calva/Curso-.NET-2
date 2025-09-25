@@ -47,6 +47,7 @@
             this.tbxUrlImagen = new System.Windows.Forms.TextBox();
             this.lblPreview = new System.Windows.Forms.Label();
             this.pbxPreview = new System.Windows.Forms.PictureBox();
+            this.btnAgregarImagen = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbxPreview)).BeginInit();
             this.SuspendLayout();
             // 
@@ -200,7 +201,7 @@
             // 
             this.tbxUrlImagen.Location = new System.Drawing.Point(432, 47);
             this.tbxUrlImagen.Name = "tbxUrlImagen";
-            this.tbxUrlImagen.Size = new System.Drawing.Size(194, 20);
+            this.tbxUrlImagen.Size = new System.Drawing.Size(168, 20);
             this.tbxUrlImagen.TabIndex = 16;
             this.tbxUrlImagen.TextChanged += new System.EventHandler(this.tbxUrlImagen_TextChanged);
             // 
@@ -223,11 +224,22 @@
             this.pbxPreview.TabIndex = 18;
             this.pbxPreview.TabStop = false;
             // 
+            // btnAgregarImagen
+            // 
+            this.btnAgregarImagen.Location = new System.Drawing.Point(606, 45);
+            this.btnAgregarImagen.Name = "btnAgregarImagen";
+            this.btnAgregarImagen.Size = new System.Drawing.Size(25, 23);
+            this.btnAgregarImagen.TabIndex = 19;
+            this.btnAgregarImagen.Text = "+";
+            this.btnAgregarImagen.UseVisualStyleBackColor = true;
+            this.btnAgregarImagen.Click += new System.EventHandler(this.btnAgregarImagen_Click);
+            // 
             // AgregarArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(632, 254);
+            this.ClientSize = new System.Drawing.Size(639, 254);
+            this.Controls.Add(this.btnAgregarImagen);
             this.Controls.Add(this.pbxPreview);
             this.Controls.Add(this.lblPreview);
             this.Controls.Add(this.tbxUrlImagen);
@@ -278,5 +290,6 @@
         private System.Windows.Forms.TextBox tbxUrlImagen;
         private System.Windows.Forms.Label lblPreview;
         private System.Windows.Forms.PictureBox pbxPreview;
+        private System.Windows.Forms.Button btnAgregarImagen;
     }
 }

@@ -10,12 +10,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Negocio;
 using System.Diagnostics.Contracts;
+using System.Configuration;
+using System.IO;
 
 namespace AplicacionEscritorio.Properties
 {
     public partial class AgregarArticulo : Form
     {
         Articulos objeto;
+        OpenFileDialog archivo = null;
         public AgregarArticulo()
         {
             InitializeComponent();
@@ -54,7 +57,14 @@ namespace AplicacionEscritorio.Properties
                     negocio.agregarArticulo(objeto);
                     MessageBox.Show("Se agregó el articulo con exito!");
                     Close();
-                } 
+                }
+
+                //Si levanto una imagen, la guardo aca.
+                if (archivo != null && !(tbxUrlImagen.Text.ToLower().Contains("http"))) ;
+                {
+                    File.Copy(archivo.FileName, ConfigurationManager.AppSettings["images-folder"] + archivo.SafeFileName);
+                }
+
             }
             catch (Exception ex)
             {
@@ -125,7 +135,26 @@ namespace AplicacionEscritorio.Properties
             }
         }
 
-        
+        private void btnAgregarImagen_Click(object sender, EventArgs e)
+        {
+            archivo = new OpenFileDialog();
+            archivo.Filter = "Imagen JPG | *.jpg| Imagen PNG | *.png";
+
+            //PARA CREAR LA CARPETA SI NO EXISTE
+            if (!Directory.Exists(ConfigurationManager.AppSettings["images-folder"]))
+            {
+                Directory.CreateDirectory(ConfigurationManager.AppSettings["images-folder"]);
+            }
+
+
+            if (archivo.ShowDialog() == DialogResult.OK)
+            {
+                tbxUrlImagen.Text = archivo.FileName;
+                cargarImagen(archivo.FileName);
+
+                //File.Copy(archivo.FileName, ConfigurationManager.AppSettings["images-folder"] + archivo.SafeFileName);
+            }
+        }
     }
     
 }
