@@ -46,6 +46,7 @@
             this.lblFiltroValor = new System.Windows.Forms.Label();
             this.lblCriterio = new System.Windows.Forms.Label();
             this.lblCampo = new System.Windows.Forms.Label();
+            this.btnLimpiarFiltro = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxArticulo)).BeginInit();
             this.SuspendLayout();
@@ -63,6 +64,7 @@
             this.dgvProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvProductos.Size = new System.Drawing.Size(708, 266);
             this.dgvProductos.TabIndex = 0;
+            this.dgvProductos.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dgvProductos_DataError);
             this.dgvProductos.SelectionChanged += new System.EventHandler(this.dgvProductos_SelectionChanged);
             // 
             // btnAgregar
@@ -129,7 +131,7 @@
             // 
             // btnFiltrar
             // 
-            this.btnFiltrar.Location = new System.Drawing.Point(772, 27);
+            this.btnFiltrar.Location = new System.Drawing.Point(778, 25);
             this.btnFiltrar.Name = "btnFiltrar";
             this.btnFiltrar.Size = new System.Drawing.Size(75, 23);
             this.btnFiltrar.TabIndex = 7;
@@ -200,11 +202,22 @@
             this.lblCampo.TabIndex = 14;
             this.lblCampo.Text = "Campo:";
             // 
+            // btnLimpiarFiltro
+            // 
+            this.btnLimpiarFiltro.Location = new System.Drawing.Point(778, 54);
+            this.btnLimpiarFiltro.Name = "btnLimpiarFiltro";
+            this.btnLimpiarFiltro.Size = new System.Drawing.Size(75, 23);
+            this.btnLimpiarFiltro.TabIndex = 15;
+            this.btnLimpiarFiltro.Text = "Limpiar Filtro";
+            this.btnLimpiarFiltro.UseVisualStyleBackColor = true;
+            this.btnLimpiarFiltro.Click += new System.EventHandler(this.btnLimpiarFiltro_Click);
+            // 
             // formPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(896, 356);
+            this.Controls.Add(this.btnLimpiarFiltro);
             this.Controls.Add(this.lblCampo);
             this.Controls.Add(this.lblCriterio);
             this.Controls.Add(this.lblFiltroValor);
@@ -249,6 +262,7 @@
         private System.Windows.Forms.Label lblFiltroValor;
         private System.Windows.Forms.Label lblCriterio;
         private System.Windows.Forms.Label lblCampo;
+        private System.Windows.Forms.Button btnLimpiarFiltro;
     }
 }
 

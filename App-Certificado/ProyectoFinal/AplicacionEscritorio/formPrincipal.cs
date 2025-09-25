@@ -44,10 +44,14 @@ namespace AplicacionEscritorio
         private void dgvProductos_SelectionChanged(object sender, EventArgs e)
         {
             Articulos aux = new Articulos();
-            if (aux == null)
+            if (aux != null)
             {
                 aux = (Articulos)dgvProductos.CurrentRow.DataBoundItem;
                 cargarImagen(aux.UrlImagen);
+            }
+            else
+            {
+                cargarImagen("https://imgs.search.brave.com/GoFaUzcpoaWIfsGMqByaylLvtEKMbDzzW-hC7myjZ_o/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/c2h1dHRlcnN0b2Nr/LmNvbS9pbWFnZS12/ZWN0b3IvZGVmYXVs/dC11aS1pbWFnZS1w/bGFjZWhvbGRlci13/aXJlZnJhbWVzLTI2/MG53LTEwMzc3MTkx/OTIuanBn");
             }
         }
 
@@ -62,6 +66,7 @@ namespace AplicacionEscritorio
                 pbxArticulo.Load("https://imgs.search.brave.com/GoFaUzcpoaWIfsGMqByaylLvtEKMbDzzW-hC7myjZ_o/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/c2h1dHRlcnN0b2Nr/LmNvbS9pbWFnZS12/ZWN0b3IvZGVmYXVs/dC11aS1pbWFnZS1w/bGFjZWhvbGRlci13/aXJlZnJhbWVzLTI2/MG53LTEwMzc3MTkx/OTIuanBn");
             }
         }
+
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
@@ -94,8 +99,60 @@ namespace AplicacionEscritorio
             }
         }
 
+        //Para validar seleccion
+        private bool soloNumeros(string texto)
+        {
+            foreach (char caracter in texto)
+            {
+                if ((!char.IsNumber(caracter)) && !(char.IsPunctuation(caracter)))
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+        private bool contieneComa(string texto)
+        {
+            foreach (char caracter in texto)
+            {
+                if (caracter == ',')
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+        private bool filtroSeleccionado()
+        {
+            if (cbxCampo.SelectedIndex < 0)
+            {
+                MessageBox.Show("Por favor seleccione un filtro.", "Atencion", MessageBoxButtons.OK);
+                return false;
+            }
+            else if (string.IsNullOrEmpty(tbxValor.Text))
+            {
+                MessageBox.Show("Por favor escriba el filtro deseado.", "Atencion", MessageBoxButtons.OK);
+                return false;
+            }
+            //Para precio especificamente
+            if (cbxCampo.SelectedItem.ToString() == "Precio")
+            {
+                if (!(soloNumeros(tbxValor.Text.Trim()))) //Si no se cumple, contiene alguna letra
+                {
+                    MessageBox.Show("Solo puede ingresar numeros para este filtro.", "Atencion", MessageBoxButtons.OK);
+                    return false;
+                }
+                else if (!contieneComa(tbxValor.Text.Trim()))
+                {
+                    MessageBox.Show("Por favor, separe los decimales con un punto (.).", "Atencion", MessageBoxButtons.OK);
+                    return false;
+                }
+            }
+            return true;
+        }
         private void btnFiltrar_Click(object sender, EventArgs e)
         {
+            if (!filtroSeleccionado()) return; //Reviso que haya algun campo seleccionado
             ArticuloNegocio negocio = new ArticuloNegocio();
             string campo = cbxCampo.SelectedItem.ToString();
             string criterio = cbxCriterio.SelectedItem.ToString();
@@ -134,7 +191,7 @@ namespace AplicacionEscritorio
                 throw ex;
             }
         }
-        
+
         private void cargarComboBox()
         {
             ///CAMPO
@@ -148,23 +205,47 @@ namespace AplicacionEscritorio
 
         private void cbxCampo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //CARGAR CBX CRITERIO
-            if (cbxCampo.SelectedItem.ToString() == "Precio")
+            try
             {
-                cbxCriterio.Items.Clear();
-                cbxCriterio.Items.Add("Mayor a");
-                cbxCriterio.Items.Add("Menor a");
-                cbxCriterio.Items.Add("Igual a");
-                cbxCriterio.SelectedItem = "Igual a";
+                if (cbxCampo.SelectedIndex == -1) return; //Por si estoy usando el boton de limpiar filtros
+                                                          //CARGAR CBX CRITERIO
+                if (cbxCampo.SelectedItem.ToString() == "Precio")
+                {
+                    cbxCriterio.Items.Clear();
+                    cbxCriterio.Items.Add("Mayor a");
+                    cbxCriterio.Items.Add("Menor a");
+                    cbxCriterio.Items.Add("Igual a");
+                    cbxCriterio.SelectedItem = "Igual a";
+                }
+                else
+                {
+                    cbxCriterio.Items.Clear();
+                    cbxCriterio.Items.Add("Comienza con");
+                    cbxCriterio.Items.Add("Termina con");
+                    cbxCriterio.Items.Add("Contiene");
+                    cbxCriterio.SelectedItem = "Contiene";
+                }
             }
-            else
+            catch (Exception ex)
             {
-                cbxCriterio.Items.Clear();
-                cbxCriterio.Items.Add("Comienza con");
-                cbxCriterio.Items.Add("Termina con");
-                cbxCriterio.Items.Add("Contiene");
-                cbxCriterio.SelectedItem = "Contiene";
+                throw ex;
             }
+
+        }
+
+        private void btnLimpiarFiltro_Click(object sender, EventArgs e)
+        {
+            cargarDgv();
+            cbxCampo.SelectedIndex = -1;
+            cbxCriterio.SelectedIndex = -1;
+            tbxValor.Text = string.Empty;
+        }
+
+        private void dgvProductos_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+           e.Cancel = true;
         }
     }
+
+
 }

@@ -12,6 +12,7 @@ using Negocio;
 using System.Diagnostics.Contracts;
 using System.Configuration;
 using System.IO;
+using System.Diagnostics.Eventing.Reader;
 
 namespace AplicacionEscritorio.Properties
 {
@@ -29,6 +30,71 @@ namespace AplicacionEscritorio.Properties
             objeto = articuloCargado;
         }
 
+        private bool soloNumeros(string texto)
+        {
+            foreach (char caracter in texto)
+            {
+                if ((!char.IsNumber(caracter)) && !(char.IsPunctuation(caracter)))
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+        private bool contieneComa(string texto)
+        {
+            foreach (char caracter in texto)
+            {
+                if (caracter == '.')
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        private bool validarArticulo(Articulos articulo)
+        {
+            if (string.IsNullOrEmpty(tbxCodigo.Text))
+            {
+                MessageBox.Show("Por favor ingrese un codigo.", "Atencion", MessageBoxButtons.OK);
+                return false;
+            }
+            else if (string.IsNullOrEmpty(tbxNombre.Text))
+            {
+                MessageBox.Show("Por favor ingrese un nombre.", "Atencion", MessageBoxButtons.OK);
+                return false;
+            }
+            //VALIDACIONES DEL PRECIO (Que se haya ingresado, que no tenga letras, y que el decimal se separe por puntos.
+            else if (string.IsNullOrEmpty(tbxPrecio.Text))
+            {
+                MessageBox.Show("Por favor ingrese un precio.", "Atencion", MessageBoxButtons.OK);
+                return false;
+            }
+            else if (!(soloNumeros(tbxPrecio.Text.Trim())))
+            {
+                MessageBox.Show("El precio no debe contener letras.", "Atencion", MessageBoxButtons.OK);
+                return false;
+            }
+            else if (!contieneComa(tbxPrecio.Text.Trim()))
+            {
+                MessageBox.Show("Por favor, separe los decimales con una coma (,).", "Atencion", MessageBoxButtons.OK);
+                return false;
+            }
+
+            else if (comboMarca.SelectedIndex == -1)
+            {
+                MessageBox.Show("Por favor seleccione una marca.", "Atencion", MessageBoxButtons.OK);
+                return false;
+            }
+            else if (comboCategoria.SelectedIndex == -1)
+            {
+                MessageBox.Show("Por favor seleccione una categoría.", "Atencion", MessageBoxButtons.OK);
+                return false;
+            }
+            
+            return true;
+        }
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             ArticuloNegocio negocio = new ArticuloNegocio();
@@ -36,15 +102,40 @@ namespace AplicacionEscritorio.Properties
                 objeto = new Articulos();
             try
             {
+                if (!(validarArticulo(objeto)))
+                    return;
                 objeto.Codigo = tbxCodigo.Text;
                 objeto.Nombre = tbxNombre.Text;
                 objeto.Descripcion = tbxDescripcion.Text;
+                if (string.IsNullOrEmpty(tbxDescripcion.Text))
+                {
+                    objeto.Descripcion = "-- Sin Descripcion --"; //Para que el DGV quede mas prolijo
+                }
                 objeto.Categoria = new Categorias(); //INSTANCIO LA CATEGORIA PRIMERO
                 objeto.Categoria.IdCategoria = (int)comboCategoria.SelectedValue;
                 objeto.Marca = new Marcas();
                 objeto.Marca.IdMarca = (int)comboMarca.SelectedValue;
                 objeto.Precio = decimal.Parse(tbxPrecio.Text);
                 objeto.UrlImagen = tbxUrlImagen.Text;
+
+                //Si levanto una imagen, la guardo aca.
+                if (archivo != null && !(tbxUrlImagen.Text.ToLower().Contains("http")))
+                {
+                    if (File.Exists(ConfigurationManager.AppSettings["images-folder"] + archivo.SafeFileName) && objeto.IdArticulo == 0)
+                    //La condicion del if SOLO CONTEMPLA si estoy agregando.
+                    {
+                        MessageBox.Show("La foto seleccionada ya existe.", "Atencion", MessageBoxButtons.OK);
+                        return;
+                    } else if (objeto.IdArticulo != 0 )
+                    { //ARCHIVO NUEVO, ARCHIVO ANTIGUO.
+                        File.Copy(archivo.FileName, ConfigurationManager.AppSettings["images-folder"] + archivo.SafeFileName, true);
+                    }
+                    else 
+                    {
+                       File.Copy(archivo.FileName, ConfigurationManager.AppSettings["images-folder"] + archivo.SafeFileName);
+                    }
+                    
+                }
 
                 if (objeto.IdArticulo != 0) // ESTOY MODIFICANDO
                 {
@@ -59,11 +150,7 @@ namespace AplicacionEscritorio.Properties
                     Close();
                 }
 
-                //Si levanto una imagen, la guardo aca.
-                if (archivo != null && !(tbxUrlImagen.Text.ToLower().Contains("http"))) ;
-                {
-                    File.Copy(archivo.FileName, ConfigurationManager.AppSettings["images-folder"] + archivo.SafeFileName);
-                }
+                
 
             }
             catch (Exception ex)
@@ -79,6 +166,7 @@ namespace AplicacionEscritorio.Properties
 
         private void AgregarArticulo_Load(object sender, EventArgs e)
         {
+            Text = "Agregar Articulo";
             //Creo los negocio de Categoria y Marca
             CategoriaNegocio negocioCate = new CategoriaNegocio();
             MarcaNegocio negocioMarca = new MarcaNegocio();
@@ -94,18 +182,21 @@ namespace AplicacionEscritorio.Properties
                 comboCategoria.DataSource = negocioCate.listarCategorias();
                 comboCategoria.ValueMember = "IdCategoria"; //Tengo que usar LA PROPIEDAD DE LA CLASE
                 comboCategoria.DisplayMember = "Descripcion";
-
+                comboCategoria.SelectedIndex = -1;
 
                 /////MARCA
                 comboMarca.DataSource = negocioMarca.listarMarcas();
                 comboMarca.ValueMember = "IdMarca";
                 comboMarca.DisplayMember = "Descripcion";
+                comboMarca.SelectedIndex = -1;
                 if (objeto != null) //Si NO ES Null es porque estoy modificando.
                 {
+                    string precioModificado;
                     tbxCodigo.Text = objeto.Codigo;
                     tbxNombre.Text = objeto.Nombre;
                     tbxDescripcion.Text = objeto.Descripcion;
-                    tbxPrecio.Text = objeto.Precio.ToString();
+                    precioModificado = objeto.Precio.ToString().Substring(0, objeto.Precio.ToString().Length - 5); ;
+                    tbxPrecio.Text = precioModificado;
                     tbxUrlImagen.Text = objeto.UrlImagen;
                     comboCategoria.SelectedValue = objeto.Categoria.IdCategoria;
                     comboMarca.SelectedValue = objeto.Marca.IdMarca;
@@ -138,7 +229,7 @@ namespace AplicacionEscritorio.Properties
         private void btnAgregarImagen_Click(object sender, EventArgs e)
         {
             archivo = new OpenFileDialog();
-            archivo.Filter = "Imagen JPG | *.jpg| Imagen PNG | *.png";
+            archivo.Filter = "Imagen JPG| *.jpg|Imagen PNG| *.png";
 
             //PARA CREAR LA CARPETA SI NO EXISTE
             if (!Directory.Exists(ConfigurationManager.AppSettings["images-folder"]))
