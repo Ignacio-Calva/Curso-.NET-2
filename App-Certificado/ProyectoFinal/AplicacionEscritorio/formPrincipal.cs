@@ -29,6 +29,7 @@ namespace AplicacionEscritorio
             ArticuloNegocio negocioArt = new Negocio.ArticuloNegocio();
             listaArt = negocioArt.listarArticulos();
             dgvProductos.DataSource = listaArt;
+            dataGridView.formatoDgv(dgvProductos);
             ocultarColumnas();
             cargarImagen(listaArt[0].UrlImagen);
         }
@@ -44,7 +45,7 @@ namespace AplicacionEscritorio
         private void dgvProductos_SelectionChanged(object sender, EventArgs e)
         {
             Articulos aux = new Articulos();
-            if (aux != null)
+            if (dgvProductos.CurrentRow != null)
             {
                 aux = (Articulos)dgvProductos.CurrentRow.DataBoundItem;
                 cargarImagen(aux.UrlImagen);
