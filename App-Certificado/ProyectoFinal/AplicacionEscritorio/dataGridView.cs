@@ -8,6 +8,7 @@ using System.Windows.Forms;
 
 namespace AplicacionEscritorio
 {
+    //ESTE CODIGO ESTA GENERADO CON IA, SIRVE PARA CAMBIAR EL FORMATO DE LA DGV Y QUE SE VEAN BONITOS LOS COLORES
     public static class dataGridView
     {
         public static void formatoDgv(DataGridView pData)

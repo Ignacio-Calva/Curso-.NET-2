@@ -246,6 +246,43 @@ namespace AplicacionEscritorio
         {
            e.Cancel = true;
         }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnMax_Click(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Normal) {
+                WindowState = FormWindowState.Maximized;
+            }
+            else if (WindowState == FormWindowState.Maximized)
+            {
+                WindowState = FormWindowState.Normal;
+            }
+        }
+
+        private void btnMin_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        //PARA MOVER LA VENTANA DESDE EL PANEL
+        private int clickX, clickY;
+        private void pnlBotones_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button != MouseButtons.Left)
+            {
+                clickX = e.X;
+                clickY = e.Y;
+            }
+            else
+            {
+                this.Left = this.Left + (e.X - clickX);
+                this.Top = this.Top + (e.Y - clickY);
+            }
+        }
     }
 
 
