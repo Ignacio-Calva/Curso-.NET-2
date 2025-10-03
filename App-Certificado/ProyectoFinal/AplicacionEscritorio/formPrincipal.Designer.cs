@@ -47,8 +47,8 @@
             this.lblCampo = new System.Windows.Forms.Label();
             this.btnLimpiarFiltro = new System.Windows.Forms.Button();
             this.pnlBotones = new System.Windows.Forms.Panel();
-            this.btnMax = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
+            this.btnMax = new System.Windows.Forms.Button();
             this.btnMin = new System.Windows.Forms.Button();
             this.pbxArticulo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
@@ -67,7 +67,7 @@
             this.dgvProductos.Name = "dgvProductos";
             this.dgvProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvProductos.Size = new System.Drawing.Size(708, 448);
-            this.dgvProductos.TabIndex = 0;
+            this.dgvProductos.TabIndex = 9;
             this.dgvProductos.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dgvProductos_DataError);
             this.dgvProductos.SelectionChanged += new System.EventHandler(this.dgvProductos_SelectionChanged);
             // 
@@ -77,7 +77,7 @@
             this.btnAgregar.Location = new System.Drawing.Point(42, 529);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(75, 23);
-            this.btnAgregar.TabIndex = 1;
+            this.btnAgregar.TabIndex = 6;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
@@ -88,7 +88,7 @@
             this.btnModificar.Location = new System.Drawing.Point(146, 529);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(75, 23);
-            this.btnModificar.TabIndex = 2;
+            this.btnModificar.TabIndex = 7;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
@@ -99,7 +99,7 @@
             this.btnEliminar.Location = new System.Drawing.Point(257, 529);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 23);
-            this.btnEliminar.TabIndex = 3;
+            this.btnEliminar.TabIndex = 8;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
@@ -116,7 +116,7 @@
             this.tbxFiltro.Location = new System.Drawing.Point(87, 48);
             this.tbxFiltro.Name = "tbxFiltro";
             this.tbxFiltro.Size = new System.Drawing.Size(171, 20);
-            this.tbxFiltro.TabIndex = 5;
+            this.tbxFiltro.TabIndex = 0;
             this.tbxFiltro.TextChanged += new System.EventHandler(this.tbxFiltro_TextChanged);
             // 
             // lblFiltroRapido
@@ -135,7 +135,7 @@
             this.btnFiltrar.Location = new System.Drawing.Point(825, 46);
             this.btnFiltrar.Name = "btnFiltrar";
             this.btnFiltrar.Size = new System.Drawing.Size(91, 23);
-            this.btnFiltrar.TabIndex = 7;
+            this.btnFiltrar.TabIndex = 4;
             this.btnFiltrar.Text = "Filtrar";
             this.btnFiltrar.UseVisualStyleBackColor = true;
             this.btnFiltrar.Click += new System.EventHandler(this.btnFiltrar_Click);
@@ -148,7 +148,7 @@
             this.cbxCampo.Location = new System.Drawing.Point(361, 48);
             this.cbxCampo.Name = "cbxCampo";
             this.cbxCampo.Size = new System.Drawing.Size(121, 21);
-            this.cbxCampo.TabIndex = 8;
+            this.cbxCampo.TabIndex = 1;
             this.cbxCampo.SelectedIndexChanged += new System.EventHandler(this.cbxCampo_SelectedIndexChanged);
             // 
             // lblFiltroAvanzado
@@ -167,7 +167,7 @@
             this.cbxCriterio.Location = new System.Drawing.Point(488, 48);
             this.cbxCriterio.Name = "cbxCriterio";
             this.cbxCriterio.Size = new System.Drawing.Size(121, 21);
-            this.cbxCriterio.TabIndex = 10;
+            this.cbxCriterio.TabIndex = 2;
             // 
             // tbxValor
             // 
@@ -175,7 +175,7 @@
             this.tbxValor.Location = new System.Drawing.Point(615, 48);
             this.tbxValor.Name = "tbxValor";
             this.tbxValor.Size = new System.Drawing.Size(131, 20);
-            this.tbxValor.TabIndex = 11;
+            this.tbxValor.TabIndex = 3;
             // 
             // lblFiltroValor
             // 
@@ -211,7 +211,7 @@
             this.btnLimpiarFiltro.Location = new System.Drawing.Point(825, 75);
             this.btnLimpiarFiltro.Name = "btnLimpiarFiltro";
             this.btnLimpiarFiltro.Size = new System.Drawing.Size(91, 23);
-            this.btnLimpiarFiltro.TabIndex = 15;
+            this.btnLimpiarFiltro.TabIndex = 5;
             this.btnLimpiarFiltro.Text = "Limpiar Filtro";
             this.btnLimpiarFiltro.UseVisualStyleBackColor = true;
             this.btnLimpiarFiltro.Click += new System.EventHandler(this.btnLimpiarFiltro_Click);
@@ -230,6 +230,21 @@
             this.pnlBotones.TabIndex = 16;
             this.pnlBotones.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlBotones_MouseMove);
             // 
+            // btnCerrar
+            // 
+            this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCerrar.FlatAppearance.BorderSize = 0;
+            this.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.IndianRed;
+            this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSlateGray;
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrar.Image = global::AplicacionEscritorio.Properties.Resources.close_resize;
+            this.btnCerrar.Location = new System.Drawing.Point(967, 2);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(30, 30);
+            this.btnCerrar.TabIndex = 2;
+            this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
             // btnMax
             // 
             this.btnMax.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -245,21 +260,6 @@
             this.btnMax.TabIndex = 1;
             this.btnMax.UseVisualStyleBackColor = true;
             this.btnMax.Click += new System.EventHandler(this.btnMax_Click);
-            // 
-            // btnCerrar
-            // 
-            this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCerrar.FlatAppearance.BorderSize = 0;
-            this.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.IndianRed;
-            this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSlateGray;
-            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrar.Image = global::AplicacionEscritorio.Properties.Resources.close_resize;
-            this.btnCerrar.Location = new System.Drawing.Point(967, 2);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(30, 30);
-            this.btnCerrar.TabIndex = 2;
-            this.btnCerrar.UseVisualStyleBackColor = true;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // btnMin
             // 

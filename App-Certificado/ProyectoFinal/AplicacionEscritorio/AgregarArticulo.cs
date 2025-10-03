@@ -246,6 +246,32 @@ namespace AplicacionEscritorio.Properties
                 //File.Copy(archivo.FileName, ConfigurationManager.AppSettings["images-folder"] + archivo.SafeFileName);
             }
         }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        private void btnMin_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        //PARA MOVER LA VENTANA DESDE EL PANEL
+        private int clickX, clickY;
+
+        private void pnlBotones_MouseMove_1(object sender, MouseEventArgs e)
+        {
+            if (e.Button != MouseButtons.Left)
+            {
+                clickX = e.X;
+                clickY = e.Y;
+            }
+            else
+            {
+                this.Left = this.Left + (e.X - clickX);
+                this.Top = this.Top + (e.Y - clickY);
+            }
+        }
     }
     
 }
