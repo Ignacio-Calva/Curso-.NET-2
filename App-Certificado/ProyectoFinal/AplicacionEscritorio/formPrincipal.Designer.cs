@@ -51,6 +51,8 @@
             this.btnMax = new System.Windows.Forms.Button();
             this.btnMin = new System.Windows.Forms.Button();
             this.pbxArticulo = new System.Windows.Forms.PictureBox();
+            this.btnDetalle = new System.Windows.Forms.Button();
+            this.imageList2 = new System.Windows.Forms.ImageList(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.pnlBotones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxArticulo)).BeginInit();
@@ -288,12 +290,29 @@
             this.pbxArticulo.TabIndex = 4;
             this.pbxArticulo.TabStop = false;
             // 
+            // btnDetalle
+            // 
+            this.btnDetalle.Location = new System.Drawing.Point(627, 529);
+            this.btnDetalle.Name = "btnDetalle";
+            this.btnDetalle.Size = new System.Drawing.Size(93, 23);
+            this.btnDetalle.TabIndex = 17;
+            this.btnDetalle.Text = "Ver Detalle";
+            this.btnDetalle.UseVisualStyleBackColor = true;
+            this.btnDetalle.Click += new System.EventHandler(this.btnDetalle_Click);
+            // 
+            // imageList2
+            // 
+            this.imageList2.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList2.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList2.TransparentColor = System.Drawing.Color.Transparent;
+            // 
             // formPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(1000, 559);
+            this.Controls.Add(this.btnDetalle);
             this.Controls.Add(this.pnlBotones);
             this.Controls.Add(this.btnLimpiarFiltro);
             this.Controls.Add(this.lblCampo);
@@ -348,6 +367,8 @@
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.Button btnMax;
         private System.Windows.Forms.Button btnMin;
+        private System.Windows.Forms.Button btnDetalle;
+        private System.Windows.Forms.ImageList imageList2;
     }
 }
 

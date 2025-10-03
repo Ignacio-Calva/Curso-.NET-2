@@ -167,6 +167,8 @@ namespace AplicacionEscritorio
         {
             dgvProductos.Columns["UrlImagen"].Visible = false;
             dgvProductos.Columns["IdArticulo"].Visible = false;
+            dgvProductos.Columns["Codigo"].Visible = false;
+            dgvProductos.Columns["Descripcion"].Visible = false;
         }
 
         private void tbxFiltro_TextChanged(object sender, EventArgs e)
@@ -270,6 +272,7 @@ namespace AplicacionEscritorio
 
         //PARA MOVER LA VENTANA DESDE EL PANEL
         private int clickX, clickY;
+
         private void pnlBotones_MouseMove(object sender, MouseEventArgs e)
         {
             if (e.Button != MouseButtons.Left)
@@ -283,7 +286,14 @@ namespace AplicacionEscritorio
                 this.Top = this.Top + (e.Y - clickY);
             }
         }
+        private void btnDetalle_Click(object sender, EventArgs e)
+        {
+            Articulos articuloSeleccionado = new Articulos();
+            articuloSeleccionado = (Articulos)dgvProductos.CurrentRow.DataBoundItem;
+            VerDetalle ventanaDetalle = new VerDetalle(articuloSeleccionado);
+            ventanaDetalle.ShowDialog();
+            cargarDgv();
+            ocultarColumnas();
+        }
     }
-
-
 }
