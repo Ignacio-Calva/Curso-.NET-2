@@ -68,8 +68,8 @@ namespace Negocio
                     "('" + articuloAgregado.Codigo + "', '" +
                      articuloAgregado.Nombre + "', '" +
                      articuloAgregado.Descripcion + "', '" +
-                     articuloAgregado.Categoria.IdCategoria + "', '" +
                      articuloAgregado.Marca.IdMarca + "', '" +
+                     articuloAgregado.Categoria.IdCategoria + "', '" +
                      articuloAgregado.UrlImagen + "', '" +
                      articuloAgregado.Precio +"')");
                 datos.ejecutarAccion();

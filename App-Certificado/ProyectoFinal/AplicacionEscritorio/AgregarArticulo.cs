@@ -179,16 +179,18 @@ namespace AplicacionEscritorio.Properties
             try
             {
                 //Cargo los ComboBox
+                comboCategoria.SelectedIndex = -1;
                 comboCategoria.DataSource = negocioCate.listarCategorias();
                 comboCategoria.ValueMember = "IdCategoria"; //Tengo que usar LA PROPIEDAD DE LA CLASE
                 comboCategoria.DisplayMember = "Descripcion";
-                comboCategoria.SelectedIndex = -1;
+
 
                 /////MARCA
+                comboMarca.SelectedIndex = -1;
                 comboMarca.DataSource = negocioMarca.listarMarcas();
                 comboMarca.ValueMember = "IdMarca";
                 comboMarca.DisplayMember = "Descripcion";
-                comboMarca.SelectedIndex = -1;
+                
                 if (objeto != null) //Si NO ES Null es porque estoy modificando.
                 {
                     string precioModificado;
